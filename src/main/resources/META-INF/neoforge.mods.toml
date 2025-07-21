@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="MIT"
+
+[[mods]]
+modId="crate"
+version="1.0.0"
+displayName="Crate"
+authors="YourName"
+description='''A simple crate mod.'''
+
+[[mixins]]
+config="crate.mixins.json"
+
+[[dependencies.crate]]
+modId="neoforge"
+type="required"
+versionRange="[21.4.147,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.crate]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.4,)"
+ordering="NONE"
+side="BOTH"
