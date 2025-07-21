@@ -1,0 +1,13 @@
+{
+  "itemGroup.crate": "Example Mod Tab",
+  "block.crate.example_block": "Example Block",
+  "item.crate.example_item": "Example Item",
+
+  "crate.configuration.title": "Crate Configs",
+  "crate.configuration.section.crate.common.toml": "Crate Configs",
+  "crate.configuration.section.crate.common.toml.title": "Crate Configs",
+  "crate.configuration.items": "Item List",
+  "crate.configuration.logDirtBlock": "Log Dirt Block",
+  "crate.configuration.magicNumberIntroduction": "Magic Number Text",
+  "crate.configuration.magicNumber": "Magic Number"
+}
