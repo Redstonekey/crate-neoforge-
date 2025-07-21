@@ -55,7 +55,7 @@ public class Crate {
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
     // Crate Key item, not craftable, looks like tripwire hook
-    public static final DeferredItem<Item> CRATE_KEY = ITEMS.registerSimpleItem("crate_key", new de.joancode.crate.item.CrateKeyItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CRATE_KEY = ITEMS.register("crate_key", () -> new de.joancode.crate.item.CrateKeyItem(new Item.Properties().stacksTo(1)));
 
     // Creates a creative tab with the id "crate:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
