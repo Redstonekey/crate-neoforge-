@@ -50,9 +50,12 @@ public class Crate {
     // Creates a new BlockItem with the id "crate:example_block", combining the namespace and path
     public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
 
-    // Creates a new food item with the id "crate:example_id", nutrition 1 and saturation 2
+    // Creates a new food item with the id "crate:example_item", nutrition 1 and saturation 2
     public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
+
+    // Crate Key item, not craftable, looks like tripwire hook
+    public static final DeferredItem<Item> CRATE_KEY = ITEMS.registerSimpleItem("crate_key", new de.joancode.crate.item.CrateKeyItem(new Item.Properties().stacksTo(1)));
 
     // Creates a creative tab with the id "crate:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
@@ -61,6 +64,7 @@ public class Crate {
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(CRATE_KEY.get()); // Add the crate key to the tab for testing
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
